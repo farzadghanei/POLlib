@@ -1,0 +1,11 @@
+ParsOnline PHP Library
+-------------------------------------------------------------------------------
+This directory and all subdirectories contain components of ParsOnline PHP library,
+an open source PHP code library released as open sourced code.
+all the source codes, test cases, documentations, examples and data files
+available in this package are copyrighted by ParsOnline, Inc. (www.parsonline.com),
+and are licensed under the terms of Apache license version 2.0. Some modules might be released under
+another open source license which are specified on the source file documentation.
+an exact copy of this license is also available in the LICENSE file.
+
+Copyright (c) 2010-2013 ParsOnline, Inc. (www.parsonline.com)
