@@ -2,7 +2,7 @@
 
 PHP library developed in [ParsOnline data center][1].
 
-This library was developed by me and my colleagues over time by extracting shared functionality between internal applications developed in ParsOnline. ParsOnline releases the library as an open source project.
+This library was developed by me and my colleagues over time by extracting shared functionality between internal applications developed in ParsOnline. ParsOnline released the library as an open source project.
 
 The project includes a loosely coupled set of modules useful for a variety of general use tasks and are not bound to or related to business logic of ParsOnline applications.
 The ZF name space is used for those modules that were used by applications based on [Zend Framework][2] (version 1.x) and require the framework libraries to be available.
