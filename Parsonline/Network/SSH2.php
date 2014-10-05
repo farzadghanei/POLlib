@@ -519,12 +519,12 @@ class Parsonline_Network_SSH2
      */
     public function setPort($port)
     {
-        if ( 1 > $port || 65536 < $port) {
+        if ( 1 > $port || 65535 < $port) {
             /**
              * @uses    Parsonline_Exception_ValueException
              */
             require_once('Parsonline/Exception/ValueException.php');
-            throw new Parsonline_Exception_ValueException("TCP port number '{$port}' is out of range 1-65536");
+            throw new Parsonline_Exception_ValueException("TCP port number '{$port}' is out of range 1-65535");
         }
         $this->_port = intval($port);
         return $this;
