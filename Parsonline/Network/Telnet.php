@@ -438,7 +438,7 @@ class Parsonline_Network_Telnet
      */
     public function setPort($port=23)
     {
-        if ( 1 > $port || 65535 > $port) {
+        if ( 1 > $port || 65535 < $port) {
             /**
              * @uses    Parsonline_Exception_ValueException
              */
