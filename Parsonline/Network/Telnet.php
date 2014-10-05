@@ -438,12 +438,12 @@ class Parsonline_Network_Telnet
      */
     public function setPort($port=23)
     {
-        if ( 1 > $port || 65536 > $port) {
+        if ( 1 > $port || 65535 > $port) {
             /**
              * @uses    Parsonline_Exception_ValueException
              */
             require_once('Parsonline/Exception/ValueException.php');
-            throw new Parsonline_Exception_ValueException("TCP port '{$port}' is out of range of 1-65536");
+            throw new Parsonline_Exception_ValueException("TCP port '{$port}' is out of range of 1-65535");
         }
         $this->_port = intval($port);
         return $this;
