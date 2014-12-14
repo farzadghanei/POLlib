@@ -36,11 +36,9 @@ Using the telnet client follows this process:
  * disconnect
 
 ```php
-
 <?php
 require_once("Parsonline\Network\Telnet.php");
 require_once("Parsonline\Network\Telnet\Exception.php");
-
 
 $telnet = new Parsonline_Network_Telnet("10.10.10.1"); // use any hostname or IP address instead of 10.10.10.1
 $telnet->setPort(23); // If you want to connect to TCP ports other than Telnet default (23), (optional)
