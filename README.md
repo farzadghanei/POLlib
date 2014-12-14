@@ -35,7 +35,8 @@ Using the telnet client follows this process:
  * writing commands and reading responses
  * disconnect
 
-```
+```php
+
 <?php
 require_once("Parsonline\Network\Telnet.php");
 require_once("Parsonline\Network\Telnet\Exception.php");
