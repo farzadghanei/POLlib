@@ -23,6 +23,40 @@ The ZF name space is used for those modules that were used by applications based
  * Utils: High level array functionality.
  * ZF: Zend Framrwork specific modules that provide application resources, controller plugins, view helpers, advanced email validator, a powerful data mapper to connect data models to RDBMS using Zend\_Db. An extended Zend\_Form with element modifiers and more.
 
+## Examples
+
+### Parsonline_Network_Telnet
+
+Using the telnet client follows this process:
+
+ * instantiate a telnet client object (might pass configuration options to constructor as an array)
+ * extra configurations using setter methods
+ * connecting
+ * writing commands and reading responses
+ * disconnect
+
+```
+<?php
+require_once("Parsonline\Network\Telnet.php");
+require_once("Parsonline\Network\Telnet\Exception.php");
+
+
+$telnet = new Parsonline_Network_Telnet("10.10.10.1"); // use any hostname or IP address instead of 10.10.10.1
+$telnet->setPort(23); // If you want to connect to TCP ports other than Telnet default (23), (optional)
+$telnet->setConnectionTimeout(60); // if you want to change the connection timeout (optional)
+$telnet->setPrompt(">>>"); // this is the prompt string of the remote device. this will help telnet library to detect if output of previous command is finished and reached to the command prompt or not.
+
+try {
+    $telnet->connect();
+    $telnet->write("command to execute on host"); // send the command to be executed on remote host
+    $response = $telnet->waitForPrompt(); // read output of the command from remote host
+    $telnet->disconnect();
+} catch (Parsonline_Network_Telnet_Exception $e) {
+    // handle connection or IO error
+    $telnet->disconnect();
+    die("Error occurred: " . $e);
+}
+```
 
 [1]: http://www.parsonline.net/en/
 [2]: http://framework.zend.com/
